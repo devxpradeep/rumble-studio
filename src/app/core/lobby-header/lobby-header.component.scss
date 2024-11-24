@@ -1,0 +1,40 @@
+.bg-dark{
+    background-color: #080A0D !important;
+}
+
+.navbar-main{
+    height: 60px;
+}
+
+.navbar-nav{
+  margin-left: 150px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s, border-bottom 0.3s ease-in-out;
+    margin-right: 20px;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+  
+  .navbar-nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-item .nav-link.active::after,
+  .navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+  }
+  

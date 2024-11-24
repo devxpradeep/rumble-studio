@@ -1,0 +1,45 @@
+<div class="page-content">
+    <form class="signup-form">
+        <div class="d-flex justify-content-center mb-5">
+            <h3 class="form-title">Sign Up</h3>
+        </div>
+        <div class="d-flex">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input class="w-150" type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input class="w-150" type="text" id="age" name="age" required>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="w-150" type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center p-4 form-button" [routerLink]="['/login']">
+                <a href="#">Already have account ?</a>
+            </div>
+            <div class="d-flex justify-content-center p-4 form-button">
+                <a href="#">Create my account</a>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,139 @@
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col-md-2 ml-sm-auto col-lg-2 my-games">
+            <h6 class="text-light">
+                <fa-icon [icon]="ICONS.faGamepad" class="mx-2 gamepad"></fa-icon>
+                My Games
+            </h6>
+            <ul class="m-0 p-0 mt-4">
+                <li *ngFor="let game of games">
+                    <div class="d-flex align-items-center justify-content-start pb-3">
+                        <img [src]="game.imgUrl" alt="Avatar" class="me-3"
+                            style="width: 50px; height: 50px; object-fit: cover;">
+                        <label class="text-light">{{game.name}}</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <main role="main" class="col-md-7 ml-sm-auto col-lg-7 px-4 main-content">
+            <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" [interval]="1000"
+                [pauseOnFocus]="true" [pauseOnHover]="true">
+                @for (image of images; track image) {
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="image" alt="Random slide" />
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>No mouse navigation</h3>
+                        <p>This carousel hides navigation arrows and indicators.</p>
+                    </div>
+                </ng-template>
+                }
+            </ngb-carousel>
+            <div class="info-cards mt-2">
+                <div class="row mb-4 align-items-end">
+                    <div class="col-md-4">
+                        <button class="btn text-light">
+                            <fa-icon class="text-warning" [icon]="ICONS.faPlus"></fa-icon>
+                            New Game
+                        </button>
+                        <div class="card text-light">
+                            <img src="../../../../assets/images/avatar-01.jpg" class="card-img-top" alt="Game" />
+                            <div class="card-body">
+                                <p class="card-title">Game Name</p>
+                                <button class="btn custom-btn text-warning btn-sm">
+                                    <fa-icon [icon]="ICONS.faPlus"></fa-icon>
+                                    Add to My Games
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-light">
+                            <img src="../../../../assets/images/avatar-01.jpg" class="card-img-top" alt="Game" />
+                            <div class="card-body">
+                                <p class="card-title">Game Name</p>
+                                <button class="btn custom-btn text-warning btn-sm">
+                                    <fa-icon [icon]="ICONS.faPlus"></fa-icon>
+                                    Add to My Games
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn text-light">
+                            <fa-icon class="text-warning" [icon]="ICONS.faDownload"></fa-icon>
+                            App Download</button>
+                        <div class="card text-light">
+                            <div class="card-body text-center">
+                                <img src="assets/qr-code.png" alt="QR Code" class="img-fluid mb-2" width="120" />
+                                <p>Scan to Download</p>
+                                <button class="btn btn-warning btn-sm">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-end">
+                    <div class="col-md-4">
+                        <button class="btn text-light">
+                            <fa-icon class="text-primary" [icon]="ICONS.faCalendar"></fa-icon>
+                            Events
+                        </button>
+                        <div class="card text-light text-center">
+                            <div class="card-body">
+                                <h6>Daily Feeding</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-light text-center">
+                            <div class="card-body">
+                                <h6>Sign-in Bonus</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-light text-center">
+                            <div class="card-body">
+                                <h6>Daily Mission</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <div class="col-md-3 ml-sm-auto col-lg-3 connections">
+            <div class="input-group mb-3 search-box">
+                <input type="text" class="form-control rounded-pill" placeholder="Search..." aria-label="Search"
+                    aria-describedby="search-button">
+                <button class="btn btn-primary rounded-pill ms-2" id="search-button" type="button">
+                    <fa-icon [icon]="ICONS.faPlus"></fa-icon>
+                </button>
+            </div>
+            <ul class="m-0 p-0 mt-4">
+                <li *ngFor="let user of usersWithStatus">
+                    <div class="d-flex align-items-center justify-content-between pt-3 pb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="https://m.media-amazon.com/images/S/pv-target-images/ae4816cade1a5b7f29787d0b89610132c72c7747041481c6619b9cc3302c0101.jpg"
+                                alt="Avatar" class="rounded-circle me-3"
+                                style="width: 50px; height: 50px; object-fit: cover;">
+                            <div>
+                                <label class="mb-1 fw-bold text-light">{{user.userFullName}}</label>
+                                <div class="d-flex align-items-center">
+                                    <span class="status-dot"></span>
+                                    <small class="status ms-2" *ngIf="user.inGame;">In game</small>
+                                    <small class="status ms-2" *ngIf="!user.inGame;">Available</small>
+                                    <span class="text-light ms-2">-</span>
+                                    <small class="status ms-2">{{user.gameName}}</small>
+                                </div>
+                            </div>
+                        </div>
+                        <img [src]="user.avatar" alt="Avatar" class="me-3"
+                            style="width: 50px; height: 50px; object-fit: cover;">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="item">
+  <img [src]="game.imgUrl" alt="" />
+  <h4>{{ game.name }}<br /><span>Sandbox</span></h4>
+  <ul>
+    <li><i class="fa fa-star"></i>{{ game.rating }}</li>
+    <li><i class="fa fa-thumbs-up"></i>{{ game.likes }}</li>
+  </ul>
+  <div class="d-flex justify-content-center p-4 main-border-button">
+    <a href="#" [routerLink]="['/lobby']" routerLinkActive="router-link-active">Play Now</a>
+  </div>
+</div>

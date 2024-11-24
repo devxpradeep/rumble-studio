@@ -1,0 +1,82 @@
+.content {
+    padding: 125px 40px 40px 40px;
+}
+
+.search-box .form-control {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-box .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-box .btn i {
+    font-size: 18px;
+  }
+  
+  .rounded-avatar-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .rounded-avatar-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .status-dot {
+    width: 8px; /* Size of the dot */
+    height: 8px;
+    background-color: limegreen; /* Fancy color */
+    border-radius: 50%; /* Makes it circular */
+    display: inline-block;
+    box-shadow: 0 0 5px limegreen, 0 0 10px limegreen; /* Add glowing effect */
+  }
+  
+  .status {
+    font-size: 0.85rem;
+    color: #ddd;
+  }
+  
+  .gamepad{
+    color: yellow;
+  }
+  
+  .main-content img {
+    max-height: 200px !important;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+   }
+  
+  .card {
+    background-color: rgb(24 27 37);
+    border: none;
+    border-radius: 8px;
+    height: 150px;
+  }
+  
+  .card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-img-top{
+    height: 60px;
+    width: 30px;
+    object-fit: cover;
+  }
+
+  .custom-btn{
+    background-color: black;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }

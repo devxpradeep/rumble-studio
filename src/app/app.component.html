@@ -1,0 +1,6 @@
+<!-- <app-loader></app-loader> -->
+<app-header *ngIf="!isLobbyPage"></app-header>
+<div class="main">
+    <router-outlet></router-outlet>
+</div>
+<app-footer *ngIf="!isLobbyPage"></app-footer>
